@@ -6,6 +6,7 @@ import {
 } from "./initial-form.js";
 import "../styles/App.css";
 import { CVForm } from "./CVForm.jsx";
+import { GeneratedCV } from "./GeneratedCV.jsx";
 
 function App() {
   const [personalData, setPersonalData] = useState(initialPersonalForm);
@@ -32,11 +33,11 @@ function App() {
         experienceData={experienceData}
         educationData={educationData}
       />
-      {/* <GeneratedCV
+      <GeneratedCV
         personalData={personalData}
         experienceData={experienceData}
         educationData={educationData}
-      /> */}
+      />
     </>
   );
 }
