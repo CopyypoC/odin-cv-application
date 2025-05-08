@@ -5,6 +5,7 @@ import {
   initialEducationForm,
 } from "./initial-form.js";
 import "../styles/App.css";
+import { CVForm } from "./CVForm.jsx";
 
 function App() {
   const [personalData, setPersonalData] = useState(initialPersonalForm);
@@ -12,15 +13,15 @@ function App() {
   const [educationData, setEducationData] = useState(initialEducationForm);
 
   function handlePersonalData() {
-    setPersonalData();
+    setPersonalData({});
   }
 
   function handleExperienceData() {
-    setExperienceData();
+    setExperienceData([]);
   }
 
   function handleEducationData() {
-    setEducationData();
+    setEducationData([]);
   }
 
   return (
@@ -31,11 +32,11 @@ function App() {
         experienceData={experienceData}
         educationData={educationData}
       />
-      <GeneratedCV
+      {/* <GeneratedCV
         personalData={personalData}
         experienceData={experienceData}
         educationData={educationData}
-      />
+      /> */}
     </>
   );
 }
