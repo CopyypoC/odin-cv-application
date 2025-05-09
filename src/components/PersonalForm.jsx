@@ -4,7 +4,7 @@ export function PersonalForm({ dataMap, onChange }) {
   const setPersonalData = dataMap.personal.setPersonalData;
 
   return (
-    <fieldset className="personal-form">
+    <fieldset>
       <legend>Personal Details</legend>
 
       <div

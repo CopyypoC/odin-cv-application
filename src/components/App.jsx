@@ -38,13 +38,15 @@ function App() {
   return (
     <>
       <h1>CV Generator</h1>
-      <CVForm
-        experienceData={experienceData}
-        educationData={educationData}
-        selectedIds={selectedIds}
-        dataMap={dataMap}
-        onEdit={handleEditSection}
-      />
+      <div className="cv-form-container">
+        <CVForm
+          experienceData={experienceData}
+          educationData={educationData}
+          selectedIds={selectedIds}
+          dataMap={dataMap}
+          onEdit={handleEditSection}
+        />
+      </div>
       <GeneratedCV
         personalData={personalData}
         experienceData={experienceData}

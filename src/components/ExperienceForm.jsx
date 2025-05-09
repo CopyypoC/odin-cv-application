@@ -3,7 +3,7 @@ export function ExperienceForm({ experienceItem, onChange, dataMap }) {
   const setExperienceData = dataMap.experience.setExperienceData;
 
   return (
-    <fieldset className="experience-form">
+    <fieldset>
       <legend>Experience</legend>
 
       <div className="exp-form-data" data-uuid={experienceItem.id}>

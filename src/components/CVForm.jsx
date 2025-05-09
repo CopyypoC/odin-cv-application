@@ -18,18 +18,24 @@ export function CVForm({
   );
 
   return (
-    <form className="cv-form">
-      <PersonalForm dataMap={dataMap} onChange={onEdit} />
-      <ExperienceForm
-        experienceItem={experienceItem}
-        onChange={onEdit}
-        dataMap={dataMap}
-      />
-      <EducationForm
-        educationItem={educationItem}
-        dataMap={dataMap}
-        onChange={onEdit}
-      />
-    </form>
+    <>
+      <form className="cv-form personal-form">
+        <PersonalForm dataMap={dataMap} onChange={onEdit} />
+      </form>
+      <form className="cv-form experience-form">
+        <ExperienceForm
+          experienceItem={experienceItem}
+          onChange={onEdit}
+          dataMap={dataMap}
+        />
+      </form>
+      <form className="cv-form education-form">
+        <EducationForm
+          educationItem={educationItem}
+          dataMap={dataMap}
+          onChange={onEdit}
+        />
+      </form>
+    </>
   );
 }

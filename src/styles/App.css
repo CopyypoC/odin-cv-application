@@ -12,7 +12,7 @@ h1 {
 }
 
 /* CV Form */
-.cv-form {
+.cv-form-container {
   margin: 1rem;
   grid-area: form;
 }

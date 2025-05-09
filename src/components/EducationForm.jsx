@@ -3,7 +3,7 @@ export function EducationForm({ educationItem, onChange, dataMap }) {
   const setEducationData = dataMap.education.setEducationData;
 
   return (
-    <fieldset className="education-form">
+    <fieldset>
       <legend>Education</legend>
 
       <div className="edu-form-data" data-uuid={educationItem.id}>
