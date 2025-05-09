@@ -9,7 +9,16 @@ export const initialPersonalForm = {
 export const initialExperienceForm = [
   {
     id: crypto.randomUUID(),
-    companyName: "",
+    company: "asdjkhfklasdfjalsdfjdhaklj",
+    position: "",
+    startDate: "",
+    endDate: "",
+    location: "",
+    description: "",
+  },
+  {
+    id: crypto.randomUUID(),
+    company: "",
     position: "",
     startDate: "",
     endDate: "",
@@ -21,7 +30,15 @@ export const initialExperienceForm = [
 export const initialEducationForm = [
   {
     id: crypto.randomUUID(),
-    schoolName: "",
+    school: "",
+    degree: "",
+    startDate: "",
+    endDate: "",
+    location: "",
+  },
+  {
+    id: crypto.randomUUID(),
+    school: "",
     degree: "",
     startDate: "",
     endDate: "",

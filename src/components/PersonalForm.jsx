@@ -1,9 +1,9 @@
-export function PersonalForm() {
+export function PersonalForm({ personalData }) {
   return (
     <fieldset className="personal-form">
       <legend>Personal Details</legend>
 
-      <div className="">
+      <div className="personal-form-data" data-uuid={personalData.id}>
         <label htmlFor="personal-name">Name</label>
         <input type="text" id="personal-name" />
 

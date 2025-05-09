@@ -12,13 +12,17 @@ function App() {
   const [personalData, setPersonalData] = useState(initialPersonalForm);
   const [experienceData, setExperienceData] = useState(initialExperienceForm);
   const [educationData, setEducationData] = useState(initialEducationForm);
+  const [selectedIds, setSelectedIds] = useState({
+    experience: experienceData[0].id,
+    education: educationData[0].id,
+  });
 
   function handlePersonalData() {
     setPersonalData({});
   }
 
-  function handleExperienceData() {
-    setExperienceData([]);
+  function handleExperienceData(input) {
+    setExperienceData();
   }
 
   function handleEducationData() {
@@ -32,6 +36,7 @@ function App() {
         personalData={personalData}
         experienceData={experienceData}
         educationData={educationData}
+        selectedIds={selectedIds}
       />
       <GeneratedCV
         personalData={personalData}
@@ -43,5 +48,3 @@ function App() {
 }
 
 export default App;
-
-// App holds shared state from CVForm to pass into GeneratedCV

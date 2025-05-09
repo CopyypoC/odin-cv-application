@@ -1,8 +1,8 @@
-export function EducationForm() {
+export function EducationForm({ educationItem }) {
   return (
-    <fieldset className="education">
+    <fieldset className="education-form">
       <legend>Education</legend>
-      <div>
+      <div className="edu-form-data" data-uuid={educationItem.id}>
         <label htmlFor="school">School</label>
         <input type="text" id="school" />
 
