@@ -1,0 +1,21 @@
+form {
+  width: 500px;
+}
+
+legend {
+  font-weight: bold;
+}
+
+.personal-form-data,
+.exp-form-data,
+.edu-form-data {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+input {
+  background-color: aliceblue;
+  border: 1px solid gray;
+  padding: 3px;
+}
