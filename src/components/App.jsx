@@ -24,32 +24,6 @@ function App() {
     education: { educationData, setEducationData },
   };
 
-  const handlePersonalData = () => {
-    setPersonalData({});
-  };
-
-  const handleEditExperience = (e) => {
-    const newExperienceData = experienceData.map((item) => {
-      if (item.id === selectedIds.experience) {
-        item[e.target.name] = e.target.value;
-      }
-      return item;
-    });
-
-    setExperienceData([...newExperienceData]);
-  };
-
-  const handleEditEducation = (e) => {
-    const newEducationData = educationData.map((item) => {
-      if (item.id === selectedIds.education) {
-        item[e.target.name] = e.target.value;
-      }
-      return item;
-    });
-
-    setEducationData([...newEducationData]);
-  };
-
   const handleEditSection = (data, e, setData, section) => {
     const newData = data.map((item) => {
       if (item.id === selectedIds[section]) {
