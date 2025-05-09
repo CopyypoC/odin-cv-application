@@ -17,6 +17,12 @@ function App() {
     education: educationData[0].id,
   });
 
+  const dataMap = {
+    personal: { personalData, setPersonalData },
+    experience: { experienceData, setExperienceData },
+    education: { educationData, setEducationData },
+  };
+
   const handlePersonalData = () => {
     setPersonalData({});
   };
@@ -43,6 +49,17 @@ function App() {
     setEducationData([...newEducationData]);
   };
 
+  const handleEditSection = (data, e, setData, section) => {
+    const newData = data.map((item) => {
+      if (item.id === selectedIds[section]) {
+        item[e.target.name] = e.target.value;
+      }
+      return item;
+    });
+
+    setData([...newData]);
+  };
+
   return (
     <>
       <h1>CV Generator</h1>
@@ -51,8 +68,8 @@ function App() {
         experienceData={experienceData}
         educationData={educationData}
         selectedIds={selectedIds}
-        onExperienceChange={handleEditExperience}
-        onEducationChange={handleEditEducation}
+        dataMap={dataMap}
+        onEdit={handleEditSection}
       />
       <GeneratedCV
         personalData={personalData}

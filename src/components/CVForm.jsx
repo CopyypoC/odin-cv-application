@@ -7,8 +7,8 @@ export function CVForm({
   experienceData,
   educationData,
   selectedIds,
-  onExperienceChange,
-  onEducationChange,
+  dataMap,
+  onEdit,
 }) {
   const experienceItem = experienceData.find(
     (item) => item.id === selectedIds.experience
@@ -23,11 +23,14 @@ export function CVForm({
       <PersonalForm personalData={personalData} />
       <ExperienceForm
         experienceItem={experienceItem}
-        onChange={onExperienceChange}
+        experienceData={experienceData}
+        onChange={onEdit}
+        dataMap={dataMap}
       />
       <EducationForm
         educationItem={educationItem}
-        onChange={onEducationChange}
+        educationData={educationData}
+        onChange={onEdit}
       />
     </form>
   );

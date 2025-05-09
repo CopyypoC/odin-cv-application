@@ -9,16 +9,8 @@ export const initialPersonalForm = {
 export const initialExperienceForm = [
   {
     id: crypto.randomUUID(),
+    section: "experience",
     company: "company 1",
-    position: "",
-    startDate: "",
-    endDate: "",
-    location: "",
-    description: "",
-  },
-  {
-    id: crypto.randomUUID(),
-    company: "",
     position: "",
     startDate: "",
     endDate: "",
@@ -30,14 +22,7 @@ export const initialExperienceForm = [
 export const initialEducationForm = [
   {
     id: crypto.randomUUID(),
-    school: "",
-    degree: "",
-    startDate: "",
-    endDate: "",
-    location: "",
-  },
-  {
-    id: crypto.randomUUID(),
+    section: "education",
     school: "",
     degree: "",
     startDate: "",

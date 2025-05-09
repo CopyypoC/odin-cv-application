@@ -1,4 +1,9 @@
-export function ExperienceForm({ experienceItem, onChange }) {
+export function ExperienceForm({
+  experienceItem,
+  experienceData,
+  onChange,
+  dataMap,
+}) {
   return (
     <fieldset className="experience-form">
       <legend>Experience</legend>
@@ -9,7 +14,14 @@ export function ExperienceForm({ experienceItem, onChange }) {
           type="text"
           id="company"
           name="company"
-          onChange={onChange}
+          onChange={(e) =>
+            onChange(
+              experienceData,
+              e,
+              dataMap.experience.setExperienceData,
+              experienceItem.section
+            )
+          }
           value={experienceItem.company}
         />
 
@@ -18,7 +30,14 @@ export function ExperienceForm({ experienceItem, onChange }) {
           type="text"
           id="position"
           name="position"
-          onChange={onChange}
+          onChange={(e) =>
+            onChange(
+              experienceData,
+              e,
+              dataMap.experience.setExperienceData,
+              experienceItem.section
+            )
+          }
           value={experienceItem.position}
         />
 
@@ -27,7 +46,14 @@ export function ExperienceForm({ experienceItem, onChange }) {
           type="text"
           id="exp-start-date"
           name="startDate"
-          onChange={onChange}
+          onChange={(e) =>
+            onChange(
+              experienceData,
+              e,
+              dataMap.experience.setExperienceData,
+              experienceItem.section
+            )
+          }
           value={experienceItem.startDate}
         />
 
@@ -36,7 +62,14 @@ export function ExperienceForm({ experienceItem, onChange }) {
           type="text"
           id="exp-end-date"
           name="endDate"
-          onChange={onChange}
+          onChange={(e) =>
+            onChange(
+              experienceData,
+              e,
+              dataMap.experience.setExperienceData,
+              experienceItem.section
+            )
+          }
           value={experienceItem.endDate}
         />
 
@@ -45,7 +78,14 @@ export function ExperienceForm({ experienceItem, onChange }) {
           type="text"
           id="exp-location"
           name="location"
-          onChange={onChange}
+          onChange={(e) =>
+            onChange(
+              experienceData,
+              e,
+              dataMap.experience.setExperienceData,
+              experienceItem.section
+            )
+          }
           value={experienceItem.location}
         />
 
@@ -54,7 +94,14 @@ export function ExperienceForm({ experienceItem, onChange }) {
           type="textarea"
           id="description"
           name="description"
-          onChange={onChange}
+          onChange={(e) =>
+            onChange(
+              experienceData,
+              e,
+              dataMap.experience.setExperienceData,
+              experienceItem.section
+            )
+          }
           value={experienceItem.description}
         />
       </div>
