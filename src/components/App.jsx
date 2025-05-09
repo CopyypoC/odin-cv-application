@@ -17,17 +17,31 @@ function App() {
     education: educationData[0].id,
   });
 
-  function handlePersonalData() {
+  const handlePersonalData = () => {
     setPersonalData({});
-  }
+  };
 
-  function handleExperienceData(input) {
-    setExperienceData();
-  }
+  const handleExperienceData = (e) => {
+    const newExperienceData = experienceData.map((item) => {
+      if (item.id === selectedIds.experience) {
+        item[e.target.name] = e.target.value;
+      }
+      return item;
+    });
 
-  function handleEducationData() {
-    setEducationData([]);
-  }
+    setExperienceData([...newExperienceData]);
+  };
+
+  const handleEducationData = (e) => {
+    const newEducationData = educationData.map((item) => {
+      if (item.id === selectedIds.education) {
+        item[e.target.name] = e.target.value;
+      }
+      return item;
+    });
+
+    setEducationData([...newEducationData]);
+  };
 
   return (
     <>
@@ -37,6 +51,8 @@ function App() {
         experienceData={experienceData}
         educationData={educationData}
         selectedIds={selectedIds}
+        onExperienceChange={handleExperienceData}
+        onEducationChange={handleEducationData}
       />
       <GeneratedCV
         personalData={personalData}

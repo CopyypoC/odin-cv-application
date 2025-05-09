@@ -7,22 +7,28 @@ export function CVForm({
   experienceData,
   educationData,
   selectedIds,
+  onExperienceChange,
+  onEducationChange,
 }) {
-  const filterExp = experienceData.filter((item) => {
-    if (item.id === selectedIds.experience) return item;
-  });
-  const experienceItem = filterExp[0];
+  const experienceItem = experienceData.find(
+    (item) => item.id === selectedIds.experience
+  );
 
-  const filterEdu = educationData.filter((item) => {
-    if (item.id === selectedIds.education) return item;
-  });
-  const educationItem = filterEdu[0];
+  const educationItem = educationData.find(
+    (item) => item.id === selectedIds.education
+  );
 
   return (
     <form className="cv-form">
       <PersonalForm personalData={personalData} />
-      <ExperienceForm experienceItem={experienceItem} />
-      <EducationForm educationItem={educationItem} />
+      <ExperienceForm
+        experienceItem={experienceItem}
+        onChange={onExperienceChange}
+      />
+      <EducationForm
+        educationItem={educationItem}
+        onChange={onEducationChange}
+      />
     </form>
   );
 }

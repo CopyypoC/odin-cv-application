@@ -9,7 +9,7 @@ export const initialPersonalForm = {
 export const initialExperienceForm = [
   {
     id: crypto.randomUUID(),
-    company: "asdjkhfklasdfjalsdfjdhaklj",
+    company: "company 1",
     position: "",
     startDate: "",
     endDate: "",
