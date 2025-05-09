@@ -3,7 +3,6 @@ import { ExperienceForm } from "./ExperienceForm.jsx";
 import { EducationForm } from "./EducationForm.jsx";
 
 export function CVForm({
-  personalData,
   experienceData,
   educationData,
   selectedIds,
@@ -20,7 +19,7 @@ export function CVForm({
 
   return (
     <form className="cv-form">
-      <PersonalForm personalData={personalData} />
+      <PersonalForm dataMap={dataMap} onChange={onEdit} />
       <ExperienceForm
         experienceItem={experienceItem}
         onChange={onEdit}

@@ -1,10 +1,13 @@
-export const initialPersonalForm = {
-  id: crypto.randomUUID(),
-  name: "",
-  email: "",
-  phone: "",
-  location: "",
-};
+export const initialPersonalForm = [
+  {
+    id: crypto.randomUUID(),
+    section: "personal",
+    name: "",
+    email: "",
+    phone: "",
+    location: "",
+  },
+];
 
 export const initialExperienceForm = [
   {

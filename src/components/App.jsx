@@ -13,6 +13,7 @@ function App() {
   const [experienceData, setExperienceData] = useState(initialExperienceForm);
   const [educationData, setEducationData] = useState(initialEducationForm);
   const [selectedIds, setSelectedIds] = useState({
+    personal: personalData[0].id,
     experience: experienceData[0].id,
     education: educationData[0].id,
   });
@@ -64,7 +65,6 @@ function App() {
     <>
       <h1>CV Generator</h1>
       <CVForm
-        personalData={personalData}
         experienceData={experienceData}
         educationData={educationData}
         selectedIds={selectedIds}

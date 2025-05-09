@@ -1,4 +1,7 @@
 export function EducationForm({ educationItem, onChange, dataMap }) {
+  const educationData = dataMap.education.educationData;
+  const setEducationData = dataMap.education.setEducationData;
+
   return (
     <fieldset className="education-form">
       <legend>Education</legend>
@@ -10,12 +13,7 @@ export function EducationForm({ educationItem, onChange, dataMap }) {
           id="school"
           name="school"
           onChange={(e) => {
-            onChange(
-              dataMap.education.educationData,
-              e,
-              dataMap.education.setEducationData,
-              educationItem.section
-            );
+            onChange(educationData, e, setEducationData, educationItem.section);
           }}
           value={educationItem.school}
         />
@@ -26,12 +24,7 @@ export function EducationForm({ educationItem, onChange, dataMap }) {
           id="degree"
           name="degree"
           onChange={(e) => {
-            onChange(
-              dataMap.education.educationData,
-              e,
-              dataMap.education.setEducationData,
-              educationItem.section
-            );
+            onChange(educationData, e, setEducationData, educationItem.section);
           }}
           value={educationItem.degree}
         />
@@ -42,12 +35,7 @@ export function EducationForm({ educationItem, onChange, dataMap }) {
           id="edu-start-date"
           name="startDate"
           onChange={(e) => {
-            onChange(
-              dataMap.education.educationData,
-              e,
-              dataMap.education.setEducationData,
-              educationItem.section
-            );
+            onChange(educationData, e, setEducationData, educationItem.section);
           }}
           value={educationItem.startDate}
         />
@@ -58,12 +46,7 @@ export function EducationForm({ educationItem, onChange, dataMap }) {
           id="edu-end-date"
           name="endDate"
           onChange={(e) => {
-            onChange(
-              dataMap.education.educationData,
-              e,
-              dataMap.education.setEducationData,
-              educationItem.section
-            );
+            onChange(educationData, e, setEducationData, educationItem.section);
           }}
           value={educationItem.endDate}
         />
@@ -74,12 +57,7 @@ export function EducationForm({ educationItem, onChange, dataMap }) {
           id="edu-location"
           name="location"
           onChange={(e) => {
-            onChange(
-              dataMap.education.educationData,
-              e,
-              dataMap.education.setEducationData,
-              educationItem.section
-            );
+            onChange(educationData, e, setEducationData, educationItem.section);
           }}
           value={educationItem.location}
         />
