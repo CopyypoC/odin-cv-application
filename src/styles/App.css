@@ -1,5 +1,20 @@
-form {
-  width: 500px;
+/* General */
+#root {
+  display: grid;
+  grid-template:
+    "title cv" min-content
+    "form cv" 1fr
+    / 1fr 2fr;
+}
+
+h1 {
+  grid-area: title;
+}
+
+/* CV Form */
+.cv-form {
+  margin: 1rem;
+  grid-area: form;
 }
 
 legend {
@@ -18,4 +33,14 @@ input {
   background-color: aliceblue;
   border: 1px solid gray;
   padding: 3px;
+}
+
+/* CV Template */
+.cv {
+  grid-area: cv;
+  display: flex;
+  flex-direction: column;
+  min-height: 80vh;
+  margin: 1rem;
+  border: 2px solid rgb(178, 179, 181);
 }
