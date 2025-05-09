@@ -21,7 +21,7 @@ function App() {
     setPersonalData({});
   };
 
-  const handleExperienceData = (e) => {
+  const handleEditExperience = (e) => {
     const newExperienceData = experienceData.map((item) => {
       if (item.id === selectedIds.experience) {
         item[e.target.name] = e.target.value;
@@ -32,7 +32,7 @@ function App() {
     setExperienceData([...newExperienceData]);
   };
 
-  const handleEducationData = (e) => {
+  const handleEditEducation = (e) => {
     const newEducationData = educationData.map((item) => {
       if (item.id === selectedIds.education) {
         item[e.target.name] = e.target.value;
@@ -51,8 +51,8 @@ function App() {
         experienceData={experienceData}
         educationData={educationData}
         selectedIds={selectedIds}
-        onExperienceChange={handleExperienceData}
-        onEducationChange={handleEducationData}
+        onExperienceChange={handleEditExperience}
+        onEducationChange={handleEditEducation}
       />
       <GeneratedCV
         personalData={personalData}
