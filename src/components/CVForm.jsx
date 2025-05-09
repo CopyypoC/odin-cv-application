@@ -23,13 +23,12 @@ export function CVForm({
       <PersonalForm personalData={personalData} />
       <ExperienceForm
         experienceItem={experienceItem}
-        experienceData={experienceData}
         onChange={onEdit}
         dataMap={dataMap}
       />
       <EducationForm
         educationItem={educationItem}
-        educationData={educationData}
+        dataMap={dataMap}
         onChange={onEdit}
       />
     </form>

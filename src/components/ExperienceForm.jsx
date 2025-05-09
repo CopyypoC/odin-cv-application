@@ -1,9 +1,4 @@
-export function ExperienceForm({
-  experienceItem,
-  experienceData,
-  onChange,
-  dataMap,
-}) {
+export function ExperienceForm({ experienceItem, onChange, dataMap }) {
   return (
     <fieldset className="experience-form">
       <legend>Experience</legend>
@@ -16,7 +11,7 @@ export function ExperienceForm({
           name="company"
           onChange={(e) =>
             onChange(
-              experienceData,
+              dataMap.experience.experienceData,
               e,
               dataMap.experience.setExperienceData,
               experienceItem.section
@@ -32,7 +27,7 @@ export function ExperienceForm({
           name="position"
           onChange={(e) =>
             onChange(
-              experienceData,
+              dataMap.experience.experienceData,
               e,
               dataMap.experience.setExperienceData,
               experienceItem.section
@@ -48,7 +43,7 @@ export function ExperienceForm({
           name="startDate"
           onChange={(e) =>
             onChange(
-              experienceData,
+              dataMap.experience.experienceData,
               e,
               dataMap.experience.setExperienceData,
               experienceItem.section
@@ -64,7 +59,7 @@ export function ExperienceForm({
           name="endDate"
           onChange={(e) =>
             onChange(
-              experienceData,
+              dataMap.experience.experienceData,
               e,
               dataMap.experience.setExperienceData,
               experienceItem.section
@@ -80,7 +75,7 @@ export function ExperienceForm({
           name="location"
           onChange={(e) =>
             onChange(
-              experienceData,
+              dataMap.experience.experienceData,
               e,
               dataMap.experience.setExperienceData,
               experienceItem.section
@@ -96,7 +91,7 @@ export function ExperienceForm({
           name="description"
           onChange={(e) =>
             onChange(
-              experienceData,
+              dataMap.experience.experienceData,
               e,
               dataMap.experience.setExperienceData,
               experienceItem.section
