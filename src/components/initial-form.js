@@ -13,7 +13,7 @@ export const initialExperienceForm = [
   {
     id: crypto.randomUUID(),
     section: "experience",
-    company: "company 1",
+    company: "",
     position: "",
     startDate: "",
     endDate: "",
