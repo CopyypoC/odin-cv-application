@@ -9,27 +9,27 @@ export const initialPersonalForm = [
   },
 ];
 
-export const initialExperienceForm = [
-  {
-    id: crypto.randomUUID(),
-    section: "experience",
-    company: "",
-    position: "",
-    startDate: "",
-    endDate: "",
-    location: "",
-    description: "",
-  },
-];
+export class ExperienceItem {
+  constructor() {
+    this.id = crypto.randomUUID();
+    this.section = "experience";
+    this.company = "";
+    this.position = "";
+    this.startDate = "";
+    this.endDate = "";
+    this.location = "";
+    this.description = "";
+  }
+}
 
-export const initialEducationForm = [
-  {
-    id: crypto.randomUUID(),
-    section: "education",
-    school: "",
-    degree: "",
-    startDate: "",
-    endDate: "",
-    location: "",
-  },
-];
+export class EducationItem {
+  constructor() {
+    this.id = crypto.randomUUID();
+    this.section = "education";
+    this.school = "";
+    this.degree = "";
+    this.startDate = "";
+    this.endDate = "";
+    this.location = "";
+  }
+}

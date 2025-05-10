@@ -6,7 +6,7 @@ export function EducationForm({ educationItem, onChange, dataMap }) {
     <form className="cv-form edu-form">
       <legend>Education</legend>
 
-      <div className="edu-form-data" data-uuid={educationItem.id}>
+      <div className="edu-form-data">
         <label htmlFor="school">School</label>
         <input
           type="text"
@@ -15,7 +15,7 @@ export function EducationForm({ educationItem, onChange, dataMap }) {
           onChange={(e) => {
             onChange(educationData, e, setEducationData, educationItem.section);
           }}
-          value={educationItem.school}
+          value={educationItem ? educationItem.school : ""}
         />
 
         <label htmlFor="degree">Degree</label>
@@ -26,7 +26,7 @@ export function EducationForm({ educationItem, onChange, dataMap }) {
           onChange={(e) => {
             onChange(educationData, e, setEducationData, educationItem.section);
           }}
-          value={educationItem.degree}
+          value={educationItem ? educationItem.degree : ""}
         />
 
         <label htmlFor="edu-start-date">Start Date</label>
@@ -37,7 +37,7 @@ export function EducationForm({ educationItem, onChange, dataMap }) {
           onChange={(e) => {
             onChange(educationData, e, setEducationData, educationItem.section);
           }}
-          value={educationItem.startDate}
+          value={educationItem ? educationItem.startDate : ""}
         />
 
         <label htmlFor="edu-end-date">End Date</label>
@@ -48,7 +48,7 @@ export function EducationForm({ educationItem, onChange, dataMap }) {
           onChange={(e) => {
             onChange(educationData, e, setEducationData, educationItem.section);
           }}
-          value={educationItem.endDate}
+          value={educationItem ? educationItem.endDate : ""}
         />
 
         <label htmlFor="edu-location">Location</label>
@@ -59,7 +59,7 @@ export function EducationForm({ educationItem, onChange, dataMap }) {
           onChange={(e) => {
             onChange(educationData, e, setEducationData, educationItem.section);
           }}
-          value={educationItem.location}
+          value={educationItem ? educationItem.location : ""}
         />
       </div>
 

@@ -6,7 +6,7 @@ export function ExperienceForm({ experienceItem, onChange, dataMap }) {
     <form className="cv-form exp-form">
       <legend>Experience</legend>
 
-      <div className="exp-form-data" data-uuid={experienceItem.id}>
+      <div className="exp-form-data">
         <label htmlFor="company">Company</label>
         <input
           type="text"
@@ -20,7 +20,7 @@ export function ExperienceForm({ experienceItem, onChange, dataMap }) {
               experienceItem.section
             )
           }
-          value={experienceItem.company}
+          value={experienceItem ? experienceItem.company : ""}
         />
 
         <label htmlFor="position">Position</label>
@@ -36,7 +36,7 @@ export function ExperienceForm({ experienceItem, onChange, dataMap }) {
               experienceItem.section
             )
           }
-          value={experienceItem.position}
+          value={experienceItem ? experienceItem.position : ""}
         />
 
         <label htmlFor="exp-start-date">Start Date</label>
@@ -52,7 +52,7 @@ export function ExperienceForm({ experienceItem, onChange, dataMap }) {
               experienceItem.section
             )
           }
-          value={experienceItem.startDate}
+          value={experienceItem ? experienceItem.startDate : ""}
         />
 
         <label htmlFor="exp-end-date">End Date</label>
@@ -68,7 +68,7 @@ export function ExperienceForm({ experienceItem, onChange, dataMap }) {
               experienceItem.section
             )
           }
-          value={experienceItem.endDate}
+          value={experienceItem ? experienceItem.endDate : ""}
         />
 
         <label htmlFor="exp-location">Location</label>
@@ -84,7 +84,7 @@ export function ExperienceForm({ experienceItem, onChange, dataMap }) {
               experienceItem.section
             )
           }
-          value={experienceItem.location}
+          value={experienceItem ? experienceItem.location : ""}
         />
 
         <label htmlFor="description">Description</label>
@@ -100,7 +100,7 @@ export function ExperienceForm({ experienceItem, onChange, dataMap }) {
               experienceItem.section
             )
           }
-          value={experienceItem.description}
+          value={experienceItem ? experienceItem.description : ""}
         />
       </div>
 
