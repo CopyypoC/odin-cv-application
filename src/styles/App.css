@@ -17,6 +17,12 @@ h1 {
   grid-area: form;
 }
 
+.cv-form {
+  border: 1px solid black;
+  margin-bottom: 1rem;
+  padding: 10px;
+}
+
 legend {
   font-weight: bold;
 }
@@ -33,6 +39,18 @@ input {
   background-color: aliceblue;
   border: 1px solid gray;
   padding: 3px;
+}
+
+.edu-list,
+.exp-list {
+  border: 1px solid black;
+}
+
+.list-item {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid black;
+  padding: 5px;
 }
 
 /* CV Template */
