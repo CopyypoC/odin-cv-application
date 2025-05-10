@@ -3,6 +3,7 @@ import { ExperienceForm } from "./ExperienceForm.jsx";
 import { EducationForm } from "./EducationForm.jsx";
 import { ExperienceList } from "./ExperienceList.jsx";
 import { EducationList } from "./EducationList.jsx";
+import { ExperienceItem, EducationItem } from "./initial-form.js";
 import { useState } from "react";
 
 export function CVForm({
@@ -37,6 +38,32 @@ export function CVForm({
     }
   };
 
+  const handleAddItem = (data, e, handleActive, section) => {
+    for (const [sectionMap, item] of Object.entries(dataMap)) {
+      if (data.length === 0 && sectionMap === section) {
+        const itemMap = Object.values(item);
+        const setData = itemMap[1];
+        let newItem;
+        if (section === "experience") {
+          newItem = new ExperienceItem();
+        } else if (section === "education") {
+          newItem = new EducationItem();
+        }
+
+        setData([...data, newItem]);
+        break;
+      } else if (sectionMap === section && item.includes(data)) {
+        const itemMap = Object.values(item);
+        const setData = itemMap[1];
+        const newItem = new data[0].constructor();
+        setData([...data, newItem]);
+        break;
+      }
+    }
+
+    handleActive(e);
+  };
+
   const experienceItem = experienceData.find(
     (item) => item.id === selectedIds.experience
   );
@@ -62,6 +89,7 @@ export function CVForm({
           experienceData={experienceData}
           isActive={isActiveExperience}
           toggleActive={handleActiveExperience}
+          onAddItem={handleAddItem}
         />
       </div>
       <div className="edu-form-container">
@@ -76,6 +104,7 @@ export function CVForm({
           educationData={educationData}
           isActive={isActiveEducation}
           toggleActive={handleActiveEducation}
+          onAddItem={handleAddItem}
         />
       </div>
     </>

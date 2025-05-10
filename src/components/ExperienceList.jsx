@@ -1,4 +1,4 @@
-export function ExperienceList({ experienceData, toggleActive }) {
+export function ExperienceList({ experienceData, toggleActive, onAddItem }) {
   const experienceItems = experienceData.map((item) => {
     return (
       <li key={item.id} className="list-item">
@@ -32,7 +32,9 @@ export function ExperienceList({ experienceData, toggleActive }) {
         type="button"
         className="list-add"
         data-toggle-true
-        onClick={toggleActive}
+        onClick={(e) =>
+          onAddItem(experienceData, e, toggleActive, "experience")
+        }
       >
         Add
       </button>

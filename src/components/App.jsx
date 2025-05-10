@@ -1,9 +1,5 @@
 import { useState } from "react";
-import {
-  initialPersonalForm,
-  ExperienceItem,
-  EducationItem,
-} from "./initial-form.js";
+import { initialPersonalForm } from "./initial-form.js";
 import "../styles/App.css";
 import { CVForm } from "./CVForm.jsx";
 import { GeneratedCV } from "./GeneratedCV.jsx";
@@ -33,6 +29,10 @@ function App() {
     });
 
     setData([...newData]);
+  };
+
+  const handleSelectId = (item, section) => {
+    setSelectedIds({ ...selectedIds, [section]: item.id });
   };
 
   return (
