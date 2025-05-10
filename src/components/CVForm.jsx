@@ -39,26 +39,20 @@ export function CVForm({
   };
 
   const handleAddItem = (data, e, handleActive, section) => {
-    for (const [sectionMap, item] of Object.entries(dataMap)) {
-      if (data.length === 0 && sectionMap === section) {
-        const itemMap = Object.values(item);
-        const setData = itemMap[1];
-        let newItem;
-        if (section === "experience") {
-          newItem = new ExperienceItem();
-        } else if (section === "education") {
-          newItem = new EducationItem();
-        }
+    const setData = Object.values(dataMap[section])[1];
 
-        setData([...data, newItem]);
-        break;
-      } else if (sectionMap === section && item.includes(data)) {
-        const itemMap = Object.values(item);
-        const setData = itemMap[1];
-        const newItem = new data[0].constructor();
-        setData([...data, newItem]);
-        break;
+    if (data.length === 0) {
+      let newItem;
+      if (section === "experience") {
+        newItem = new ExperienceItem();
+      } else if (section === "education") {
+        newItem = new EducationItem();
       }
+
+      setData([...data, newItem]);
+    } else {
+      const newItem = new data[0].constructor();
+      setData([...data, newItem]);
     }
 
     handleActive(e);
