@@ -3,6 +3,7 @@ import { ExperienceForm } from "./ExperienceForm.jsx";
 import { EducationForm } from "./EducationForm.jsx";
 import { ExperienceList } from "./ExperienceList.jsx";
 import { EducationList } from "./EducationList.jsx";
+import { useState } from "react";
 
 export function CVForm({
   experienceData,
@@ -11,6 +12,24 @@ export function CVForm({
   dataMap,
   onEdit,
 }) {
+  const [isActiveExperience, setIsActiveExperience] = useState(false);
+  const [isActiveEducation, setIsActiveEducation] = useState(false);
+
+  const handleActiveExperience = (e) => {
+    e.preventDefault();
+    if (e.target.hasAttribute("data-toggle-true")) {
+      setIsActiveExperience(true);
+    }
+
+    if (e.target.hasAttribute("data-toggle-false")) {
+      setIsActiveExperience(false);
+    }
+  };
+
+  const handleActiveEducation = () => {
+    setIsActiveEducation(!isActiveEducation);
+  };
+
   const experienceItem = experienceData.find(
     (item) => item.id === selectedIds.experience
   );
@@ -29,16 +48,28 @@ export function CVForm({
           experienceItem={experienceItem}
           onChange={onEdit}
           dataMap={dataMap}
+          isActive={isActiveExperience}
+          toggleActive={handleActiveExperience}
         />
-        <ExperienceList experienceData={experienceData} />
+        <ExperienceList
+          experienceData={experienceData}
+          isActive={isActiveExperience}
+          toggleActive={handleActiveExperience}
+        />
       </div>
       <div className="edu-form-container">
         <EducationForm
           educationItem={educationItem}
           dataMap={dataMap}
           onChange={onEdit}
-        />{" "}
-        <EducationList educationData={educationData} />
+          isActive={isActiveEducation}
+          toggleActive={handleActiveEducation}
+        />
+        <EducationList
+          educationData={educationData}
+          isActive={isActiveEducation}
+          toggleActive={handleActiveEducation}
+        />
       </div>
     </>
   );

@@ -1,9 +1,12 @@
-export function EducationForm({ educationItem, onChange, dataMap }) {
+export function EducationForm({ educationItem, onChange, dataMap, isActive }) {
   const educationData = dataMap.education.educationData;
   const setEducationData = dataMap.education.setEducationData;
 
   return (
-    <form className="cv-form edu-form">
+    <form
+      className={"cv-form edu-form " + (isActive ? "active " : "")}
+      inert={isActive ? undefined : true}
+    >
       <legend>Education</legend>
 
       <div className="edu-form-data">
@@ -63,8 +66,12 @@ export function EducationForm({ educationItem, onChange, dataMap }) {
         />
       </div>
 
-      <button type="button">Cancel</button>
-      <button type="submit">Save</button>
+      <button type="button" data-toggle-false>
+        Cancel
+      </button>
+      <button type="submit" data-toggle-false>
+        Save
+      </button>
     </form>
   );
 }

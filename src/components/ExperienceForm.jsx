@@ -1,9 +1,18 @@
-export function ExperienceForm({ experienceItem, onChange, dataMap }) {
+export function ExperienceForm({
+  experienceItem,
+  onChange,
+  dataMap,
+  isActive,
+  toggleActive,
+}) {
   const experienceData = dataMap.experience.experienceData;
   const setExperienceData = dataMap.experience.setExperienceData;
 
   return (
-    <form className="cv-form exp-form">
+    <form
+      className={"cv-form exp-form " + (isActive ? "active " : "")}
+      inert={isActive ? undefined : true}
+    >
       <legend>Experience</legend>
 
       <div className="exp-form-data">
@@ -104,8 +113,12 @@ export function ExperienceForm({ experienceItem, onChange, dataMap }) {
         />
       </div>
 
-      <button type="button">Cancel</button>
-      <button type="submit">Save</button>
+      <button type="button" data-toggle-false onClick={toggleActive}>
+        Cancel
+      </button>
+      <button type="submit" data-toggle-false onClick={toggleActive}>
+        Save
+      </button>
     </form>
   );
 }
