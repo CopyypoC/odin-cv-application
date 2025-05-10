@@ -26,8 +26,15 @@ export function CVForm({
     }
   };
 
-  const handleActiveEducation = () => {
-    setIsActiveEducation(!isActiveEducation);
+  const handleActiveEducation = (e) => {
+    e.preventDefault();
+    if (e.target.hasAttribute("data-toggle-true")) {
+      setIsActiveEducation(true);
+    }
+
+    if (e.target.hasAttribute("data-toggle-false")) {
+      setIsActiveEducation(false);
+    }
   };
 
   const experienceItem = experienceData.find(

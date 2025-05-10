@@ -1,4 +1,10 @@
-export function EducationForm({ educationItem, onChange, dataMap, isActive }) {
+export function EducationForm({
+  educationItem,
+  onChange,
+  dataMap,
+  isActive,
+  toggleActive,
+}) {
   const educationData = dataMap.education.educationData;
   const setEducationData = dataMap.education.setEducationData;
 
@@ -66,10 +72,10 @@ export function EducationForm({ educationItem, onChange, dataMap, isActive }) {
         />
       </div>
 
-      <button type="button" data-toggle-false>
+      <button type="button" data-toggle-false onClick={toggleActive}>
         Cancel
       </button>
-      <button type="submit" data-toggle-false>
+      <button type="submit" data-toggle-false onClick={toggleActive}>
         Save
       </button>
     </form>

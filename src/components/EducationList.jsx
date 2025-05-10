@@ -2,10 +2,20 @@ export function EducationList({ educationData, toggleActive }) {
   const educationItems = educationData.map((item) => {
     return (
       <li key={item.id} className="list-item">
-        <button type="button" className="item-name" data-toggle-true>
+        <button
+          type="button"
+          className="item-name"
+          data-toggle-true
+          onClick={toggleActive}
+        >
           {item.school}
         </button>
-        <button type="button" className="item-delete" data-toggle-false>
+        <button
+          type="button"
+          className="item-delete"
+          data-toggle-false
+          onClick={toggleActive}
+        >
           Delete
         </button>
       </li>
