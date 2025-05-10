@@ -3,5 +3,10 @@ export function ExperienceList({ experienceData }) {
     return <li key={item.id}>{item.company}</li>;
   });
 
-  return <ul>{experienceItems}</ul>;
+  return (
+    <ul>
+      {experienceItems}
+      <button type="button">Add</button>
+    </ul>
+  );
 }

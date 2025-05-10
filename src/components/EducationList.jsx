@@ -3,5 +3,10 @@ export function EducationList({ educationData }) {
     return <li key={item.id}>{item.school}</li>;
   });
 
-  return <ul>{educationItems}</ul>;
+  return (
+    <ul>
+      {educationItems}
+      <button type="button">Add</button>
+    </ul>
+  );
 }
