@@ -5,10 +5,10 @@ import { PersonalSection } from "./PersonalSection.jsx";
 export function GeneratedCV({ personalData, experienceData, educationData }) {
   const personalItem = personalData[0];
   const experienceSections = experienceData.map((item) => {
-    return <ExperienceSection experienceItem={item} />;
+    return <ExperienceSection key={item.id} experienceItem={item} />;
   });
   const educationSections = educationData.map((item) => {
-    return <EducationSection educationItem={item} />;
+    return <EducationSection key={item.id} educationItem={item} />;
   });
 
   return (
