@@ -1,4 +1,4 @@
-export function EducationList({ educationData, toggleActive }) {
+export function EducationList({ educationData, toggleActive, onAddItem }) {
   const educationItems = educationData.map((item) => {
     return (
       <li key={item.id} className="list-item">
@@ -32,7 +32,7 @@ export function EducationList({ educationData, toggleActive }) {
         type="button"
         className="list-add"
         data-toggle-true
-        onClick={toggleActive}
+        onClick={(e) => onAddItem(educationData, e, toggleActive, "education")}
       >
         Add
       </button>
