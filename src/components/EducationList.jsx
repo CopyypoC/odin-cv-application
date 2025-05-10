@@ -2,17 +2,25 @@ export function EducationList({ educationData }) {
   const educationItems = educationData.map((item) => {
     return (
       <li key={item.id} className="list-item">
-        <p>{item.school}</p>
-        <button type="button">Delete</button>
+        <button type="button" className="item-name">
+          {item.school}
+        </button>
+        <button type="button" className="item-delete">
+          Delete
+        </button>
       </li>
     );
   });
 
   return (
     <ul className="edu-list">
-      <p>Education List</p>
+      <button type="button" className="list-title">
+        Education List
+      </button>
       {educationItems}
-      <button type="button">Add</button>
+      <button type="button" className="list-add">
+        Add
+      </button>
     </ul>
   );
 }

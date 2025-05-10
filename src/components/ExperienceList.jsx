@@ -2,17 +2,25 @@ export function ExperienceList({ experienceData }) {
   const experienceItems = experienceData.map((item) => {
     return (
       <li key={item.id} className="list-item">
-        <p>{item.company}</p>
-        <button type="button">Delete</button>
+        <button type="button" className="item-name">
+          {item.company}
+        </button>
+        <button type="button" className="item-delete">
+          Delete
+        </button>
       </li>
     );
   });
 
   return (
     <ul className="exp-list">
-      <p>Experience List</p>
+      <button type="button" className="list-title">
+        Experience List
+      </button>
       {experienceItems}
-      <button type="button">Add</button>
+      <button type="button" className="list-add">
+        Add
+      </button>
     </ul>
   );
 }
