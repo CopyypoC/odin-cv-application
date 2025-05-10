@@ -22,28 +22,22 @@ export function CVForm({
   return (
     <>
       <div className="personal-form-container">
-        <form className="cv-form personal-form">
-          <PersonalForm dataMap={dataMap} onChange={onEdit} />
-        </form>
+        <PersonalForm dataMap={dataMap} onChange={onEdit} />
       </div>
       <div className="exp-form-container">
-        <form className="cv-form exp-form">
-          <ExperienceForm
-            experienceItem={experienceItem}
-            onChange={onEdit}
-            dataMap={dataMap}
-          />
-        </form>
+        <ExperienceForm
+          experienceItem={experienceItem}
+          onChange={onEdit}
+          dataMap={dataMap}
+        />
         <ExperienceList experienceData={experienceData} />
       </div>
       <div className="edu-form-container">
-        <form className="cv-form edu-form">
-          <EducationForm
-            educationItem={educationItem}
-            dataMap={dataMap}
-            onChange={onEdit}
-          />
-        </form>
+        <EducationForm
+          educationItem={educationItem}
+          dataMap={dataMap}
+          onChange={onEdit}
+        />{" "}
         <EducationList educationData={educationData} />
       </div>
     </>
