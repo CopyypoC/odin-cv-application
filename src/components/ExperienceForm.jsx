@@ -115,17 +115,6 @@ export function ExperienceForm({
       </div>
 
       <button
-        type="button"
-        className="cancel-btn"
-        data-toggle-false
-        onClick={(e) => {
-          toggleActive(e);
-          onSelectId(e, "experience");
-        }}
-      >
-        Cancel
-      </button>
-      <button
         type="submit"
         className="save-btn"
         data-toggle-false

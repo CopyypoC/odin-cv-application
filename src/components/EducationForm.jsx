@@ -74,17 +74,6 @@ export function EducationForm({
       </div>
 
       <button
-        type="button"
-        className="cancel-btn"
-        data-toggle-false
-        onClick={(e) => {
-          toggleActive(e);
-          onSelectId(e, "education");
-        }}
-      >
-        Cancel
-      </button>
-      <button
         type="submit"
         className="save-btn"
         data-toggle-false
