@@ -10,7 +10,7 @@ export function EducationForm({
 
   return (
     <form
-      className={"cv-form edu-form " + (isActive ? "active " : "")}
+      className={"cv-form edu-form " + (isActive ? "active " : "inactive")}
       inert={isActive ? undefined : true}
     >
       <legend>Education</legend>

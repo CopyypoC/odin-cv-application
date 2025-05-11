@@ -10,7 +10,7 @@ export function ExperienceForm({
 
   return (
     <form
-      className={"cv-form exp-form " + (isActive ? "active " : "")}
+      className={"cv-form exp-form " + (isActive ? "active " : "inactive")}
       inert={isActive ? undefined : true}
     >
       <legend>Experience</legend>

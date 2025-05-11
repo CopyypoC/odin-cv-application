@@ -31,8 +31,9 @@ function App() {
     setData([...newData]);
   };
 
-  const handleSelectId = (item, section) => {
-    setSelectedIds({ ...selectedIds, [section]: item.id });
+  const handleSelectId = (e, section) => {
+    const id = e.target.closest("[data-uuid]").dataset.uuid;
+    setSelectedIds({ ...selectedIds, [section]: id });
   };
 
   return (
@@ -43,6 +44,7 @@ function App() {
           experienceData={experienceData}
           educationData={educationData}
           selectedIds={selectedIds}
+          onSelectId={handleSelectId}
           dataMap={dataMap}
           onEdit={handleEditSection}
         />

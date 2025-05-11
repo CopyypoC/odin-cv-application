@@ -10,6 +10,7 @@ export function CVForm({
   experienceData,
   educationData,
   selectedIds,
+  onSelectId,
   dataMap,
   onEdit,
 }) {
@@ -84,6 +85,7 @@ export function CVForm({
           isActive={isActiveExperience}
           toggleActive={handleActiveExperience}
           onAddItem={handleAddItem}
+          onSelectId={onSelectId}
         />
       </div>
       <div className="edu-form-container">
@@ -99,6 +101,7 @@ export function CVForm({
           isActive={isActiveEducation}
           toggleActive={handleActiveEducation}
           onAddItem={handleAddItem}
+          onSelectId={onSelectId}
         />
       </div>
     </>
