@@ -14,9 +14,9 @@ export function GeneratedCV({ personalData, experienceData, educationData }) {
   return (
     <article className="cv">
       <PersonalSection personalItem={personalItem} />
-      <h3>Experience</h3>
+      {experienceSections.length > 0 ? <h3>Experience</h3> : null}
       {experienceSections}
-      <h3>Education</h3>
+      {educationSections.length > 0 ? <h3>Education</h3> : null}
       {educationSections}
     </article>
   );
