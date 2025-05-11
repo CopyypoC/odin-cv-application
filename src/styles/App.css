@@ -7,6 +7,7 @@
   --cv-bg-clr: #f2f0ef;
   --cv-header--clr: #dfd0b8;
   --cv-accent-clr: #ece3d5;
+  --form-section-gap: 4rem;
 }
 
 /* General */
@@ -22,6 +23,8 @@
 h1 {
   color: var(--font-clr-light);
   grid-area: title;
+  place-self: center;
+  margin-top: 1rem;
 }
 
 /* CV Form */
@@ -37,14 +40,22 @@ input {
 }
 
 .cv-form-container {
-  margin: 1rem;
+  margin: 2rem 2rem 2rem;
   grid-area: form;
 }
 
 .cv-form {
   border: 1px solid black;
-  margin-bottom: 1rem;
   padding: 10px;
+}
+
+.personal-form {
+  margin-bottom: var(--form-section-gap);
+}
+
+.exp-form,
+.edu-form {
+  margin-bottom: 1rem;
 }
 
 .cv-form.inactive {
@@ -66,6 +77,7 @@ legend {
 .edu-list,
 .exp-list {
   border: 1px solid black;
+  margin-bottom: var(--form-section-gap);
 }
 
 .list-item {
@@ -80,8 +92,9 @@ legend {
   grid-area: cv;
   display: flex;
   flex-direction: column;
-  min-height: 80vh;
-  margin: 1rem;
+  min-height: 70vh;
+  min-width: max-content;
+  margin: 2rem 8rem 2rem 6rem;
   border: 2px solid rgb(178, 179, 181);
   background-color: var(--cv-bg-clr);
 }
@@ -108,5 +121,5 @@ legend {
   font-size: 1.1rem;
   font-weight: 400;
   gap: 2rem;
-  margin-bottom: 2rem;
+  margin: 0 1rem 1rem;
 }
