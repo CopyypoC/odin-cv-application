@@ -14,10 +14,16 @@ export function GeneratedCV({ personalData, experienceData, educationData }) {
   return (
     <article className="cv">
       <PersonalSection personalItem={personalItem} />
-      {experienceSections.length > 0 ? <h3>Experience</h3> : null}
-      {experienceSections}
-      {educationSections.length > 0 ? <h3>Education</h3> : null}
-      {educationSections}
+
+      <div className="exp-section-container">
+        {experienceSections.length > 0 ? <h3>Experience</h3> : null}
+        {experienceSections}
+      </div>
+
+      <div className="edu-section-container">
+        {educationSections.length > 0 ? <h3>Education</h3> : null}
+        {educationSections}
+      </div>
     </article>
   );
 }
