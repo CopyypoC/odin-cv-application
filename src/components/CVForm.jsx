@@ -79,6 +79,7 @@ export function CVForm({
           dataMap={dataMap}
           isActive={isActiveExperience}
           toggleActive={handleActiveExperience}
+          onSelectId={onSelectId}
         />
         <ExperienceList
           experienceData={experienceData}
@@ -95,6 +96,7 @@ export function CVForm({
           onChange={onEdit}
           isActive={isActiveEducation}
           toggleActive={handleActiveEducation}
+          onSelectId={onSelectId}
         />
         <EducationList
           educationData={educationData}

@@ -4,6 +4,7 @@ export function EducationForm({
   dataMap,
   isActive,
   toggleActive,
+  onSelectId,
 }) {
   const educationData = dataMap.education.educationData;
   const setEducationData = dataMap.education.setEducationData;
@@ -72,10 +73,26 @@ export function EducationForm({
         />
       </div>
 
-      <button type="button" data-toggle-false onClick={toggleActive}>
+      <button
+        type="button"
+        className="cancel-btn"
+        data-toggle-false
+        onClick={(e) => {
+          toggleActive(e);
+          onSelectId(e, "education");
+        }}
+      >
         Cancel
       </button>
-      <button type="submit" data-toggle-false onClick={toggleActive}>
+      <button
+        type="submit"
+        className="save-btn"
+        data-toggle-false
+        onClick={(e) => {
+          toggleActive(e);
+          onSelectId(e, "education");
+        }}
+      >
         Save
       </button>
     </form>

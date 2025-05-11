@@ -4,6 +4,7 @@ export function ExperienceForm({
   dataMap,
   isActive,
   toggleActive,
+  onSelectId,
 }) {
   const experienceData = dataMap.experience.experienceData;
   const setExperienceData = dataMap.experience.setExperienceData;
@@ -113,10 +114,26 @@ export function ExperienceForm({
         />
       </div>
 
-      <button type="button" data-toggle-false onClick={toggleActive}>
+      <button
+        type="button"
+        className="cancel-btn"
+        data-toggle-false
+        onClick={(e) => {
+          toggleActive(e);
+          onSelectId(e, "experience");
+        }}
+      >
         Cancel
       </button>
-      <button type="submit" data-toggle-false onClick={toggleActive}>
+      <button
+        type="submit"
+        className="save-btn"
+        data-toggle-false
+        onClick={(e) => {
+          toggleActive(e);
+          onSelectId(e, "experience");
+        }}
+      >
         Save
       </button>
     </form>

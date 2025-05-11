@@ -32,6 +32,14 @@ function App() {
   };
 
   const handleSelectId = (e, section) => {
+    if (
+      e.target.classList.contains("cancel-btn") ||
+      e.target.classList.contains("save-btn")
+    ) {
+      setSelectedIds({ ...selectedIds, [section]: null });
+      return;
+    }
+
     const id = e.target.closest("[data-uuid]").dataset.uuid;
     setSelectedIds({ ...selectedIds, [section]: id });
   };
