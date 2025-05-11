@@ -1,3 +1,14 @@
+/* Custom Vars */
+#root {
+  --main-bg-clr: #222831;
+  --main-accent-clr: #393e46;
+  --font-clr-light: #ffffff;
+  --font-clr-dark: #000000;
+  --cv-bg-clr: #f2f0ef;
+  --cv-header--clr: #dfd0b8;
+  --cv-accent-clr: #ece3d5;
+}
+
 /* General */
 #root {
   display: grid;
@@ -5,13 +16,26 @@
     "title cv" min-content
     "form cv" 1fr
     / 1fr 2fr;
+  background-color: var(--main-bg-clr);
 }
 
 h1 {
+  color: var(--font-clr-light);
   grid-area: title;
 }
 
 /* CV Form */
+form {
+  background-color: var(--main-accent-clr);
+  color: var(--font-clr-light);
+}
+
+input {
+  background-color: var(--cv-bg-clr);
+  border: 1px solid gray;
+  padding: 3px;
+}
+
 .cv-form-container {
   margin: 1rem;
   grid-area: form;
@@ -39,12 +63,6 @@ legend {
   gap: 5px;
 }
 
-input {
-  background-color: aliceblue;
-  border: 1px solid gray;
-  padding: 3px;
-}
-
 .edu-list,
 .exp-list {
   border: 1px solid black;
@@ -65,4 +83,21 @@ input {
   min-height: 80vh;
   margin: 1rem;
   border: 2px solid rgb(178, 179, 181);
+  background-color: var(--cv-bg-clr);
+}
+
+.cv h3 {
+  background-color: var(--cv-accent-clr);
+}
+
+.cv header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--cv-header--clr);
+}
+
+.personal-bottom {
+  display: flex;
+  gap: 1rem;
 }
