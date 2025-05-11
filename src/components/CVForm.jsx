@@ -50,9 +50,12 @@ export function CVForm({
         newItem = new EducationItem();
       }
 
+      onSelectId(e, section, newItem.id);
       setData([...data, newItem]);
     } else {
       const newItem = new data[0].constructor();
+
+      onSelectId(e, section, newItem.id);
       setData([...data, newItem]);
     }
 

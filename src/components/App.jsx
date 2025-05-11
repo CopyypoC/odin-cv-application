@@ -31,12 +31,19 @@ function App() {
     setData([...newData]);
   };
 
-  const handleSelectId = (e, section) => {
+  const handleSelectId = (e, section, newItemId) => {
+    const elementClasses = e.target.classList;
+
     if (
-      e.target.classList.contains("cancel-btn") ||
-      e.target.classList.contains("save-btn")
+      elementClasses.contains("cancel-btn") ||
+      elementClasses.contains("save-btn")
     ) {
       setSelectedIds({ ...selectedIds, [section]: null });
+      return;
+    }
+
+    if (elementClasses.contains("list-add")) {
+      setSelectedIds({ ...selectedIds, [section]: newItemId });
       return;
     }
 
