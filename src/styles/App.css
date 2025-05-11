@@ -97,7 +97,16 @@ legend {
   background-color: var(--cv-header--clr);
 }
 
+.cv header h2 {
+  font-weight: 700;
+  font-size: 2rem;
+  margin: 1rem 0;
+}
+
 .personal-bottom {
   display: flex;
-  gap: 1rem;
+  font-size: 1.1rem;
+  font-weight: 400;
+  gap: 2rem;
+  margin-bottom: 2rem;
 }
