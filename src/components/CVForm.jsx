@@ -62,6 +62,18 @@ export function CVForm({
     handleActive(e);
   };
 
+  const handleDeleteItem = (data, e, handleActive, section) => {
+    const setData = Object.values(dataMap[section])[1];
+    const deleteId = e.target.closest("[data-uuid]").dataset.uuid;
+    const filteredData = data.filter((item) => {
+      if (item.id !== deleteId) return item;
+    });
+
+    if (selectedIds[section] === deleteId) handleActive(e);
+
+    setData([...filteredData]);
+  };
+
   const experienceItem = experienceData.find(
     (item) => item.id === selectedIds.experience
   );
@@ -89,6 +101,7 @@ export function CVForm({
           isActive={isActiveExperience}
           toggleActive={handleActiveExperience}
           onAddItem={handleAddItem}
+          onDeleteItem={handleDeleteItem}
           onSelectId={onSelectId}
         />
       </div>
@@ -106,6 +119,7 @@ export function CVForm({
           isActive={isActiveEducation}
           toggleActive={handleActiveEducation}
           onAddItem={handleAddItem}
+          onDeleteItem={handleDeleteItem}
           onSelectId={onSelectId}
         />
       </div>

@@ -2,6 +2,7 @@ export function ExperienceList({
   experienceData,
   toggleActive,
   onAddItem,
+  onDeleteItem,
   onSelectId,
 }) {
   const experienceItems = experienceData.map((item) => {
@@ -22,7 +23,9 @@ export function ExperienceList({
           type="button"
           className="item-delete"
           data-toggle-false
-          onClick={toggleActive}
+          onClick={(e) => {
+            onDeleteItem(experienceData, e, toggleActive, "experience");
+          }}
         >
           Delete
         </button>

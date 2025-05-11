@@ -3,6 +3,7 @@ export function EducationList({
   toggleActive,
   onAddItem,
   onSelectId,
+  onDeleteItem,
 }) {
   const educationItems = educationData.map((item) => {
     return (
@@ -22,7 +23,9 @@ export function EducationList({
           type="button"
           className="item-delete"
           data-toggle-false
-          onClick={toggleActive}
+          onClick={(e) => {
+            onDeleteItem(educationData, e, toggleActive, "education");
+          }}
         >
           Delete
         </button>
