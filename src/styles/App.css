@@ -169,6 +169,10 @@ legend {
   font-weight: 700;
 }
 
+.exp-item-position {
+  font-style: italic;
+}
+
 .exp-item-description {
   overflow-wrap: break-word;
 }

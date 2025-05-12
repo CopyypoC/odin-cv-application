@@ -1,13 +1,17 @@
 import { useState } from "react";
-import { initialPersonalForm } from "./initial-form.js";
+import {
+  initialPersonalForm,
+  initialExperienceData,
+  initialEducationData,
+} from "./initial-form.js";
 import "../styles/App.css";
 import { CVForm } from "./CVForm.jsx";
 import { GeneratedCV } from "./GeneratedCV.jsx";
 
 function App() {
   const [personalData, setPersonalData] = useState(initialPersonalForm);
-  const [experienceData, setExperienceData] = useState([]);
-  const [educationData, setEducationData] = useState([]);
+  const [experienceData, setExperienceData] = useState(initialExperienceData);
+  const [educationData, setEducationData] = useState(initialEducationData);
   const [selectedIds, setSelectedIds] = useState({
     personal: personalData[0].id,
     experience: null,
