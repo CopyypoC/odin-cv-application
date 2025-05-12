@@ -3,7 +3,8 @@ export function ExperienceSection({ experienceItem }) {
     <section className="exp-item">
       <div className="exp-item-group">
         <p className="exp-item-date">
-          {experienceItem.startDate} - {experienceItem.endDate}
+          {experienceItem.startDate ? experienceItem.startDate + " - " : null}
+          {experienceItem.endDate}
         </p>
         <p className="exp-item-location">{experienceItem.location}</p>
       </div>

@@ -3,7 +3,8 @@ export function EducationSection({ educationItem }) {
     <section className="edu-item">
       <div className="edu-item-group">
         <p className="edu-item-date">
-          {educationItem.startDate} - {educationItem.endDate}
+          {educationItem.startDate ? educationItem.startDate + " - " : null}
+          {educationItem.endDate}
         </p>
         <p className="edu-item-location">{educationItem.location}</p>
       </div>
