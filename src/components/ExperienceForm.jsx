@@ -98,8 +98,7 @@ export function ExperienceForm({
         />
 
         <label htmlFor="description">Description</label>
-        <input
-          type="textarea"
+        <textarea
           id="description"
           name="description"
           onChange={(e) =>
@@ -111,7 +110,7 @@ export function ExperienceForm({
             )
           }
           value={experienceItem ? experienceItem.description : ""}
-        />
+        ></textarea>
       </div>
 
       <button

@@ -40,6 +40,10 @@ input {
   padding: 3px;
 }
 
+#description {
+  resize: vertical;
+}
+
 .cv-form-container {
   margin: 2rem 2rem 2rem;
   grid-area: form;
@@ -94,7 +98,7 @@ legend {
   display: flex;
   flex-direction: column;
   min-height: 70vh;
-  min-width: max-content;
+  width: 50vw;
   margin: 2rem 8rem 2rem 6rem;
   border: 2px solid rgb(178, 179, 181);
   background-color: var(--cv-bg-clr);
@@ -139,14 +143,34 @@ legend {
   padding: 0.3rem 0;
 }
 
-.exp-item,
-.edu-item {
-  display: flex;
+.item {
+  display: grid;
+  grid-template:
+    "left right" 1fr
+    /20ch 1fr;
   gap: 2rem;
+  margin-top: 24px;
+}
+
+.item:first-of-type {
+  margin-top: 0;
+}
+
+.item-left {
+  grid-area: left;
+}
+
+.item-right {
+  grid-area: right;
+  min-width: 0;
 }
 
 .item-heading {
   font-weight: 700;
+}
+
+.exp-item-description {
+  overflow-wrap: break-word;
 }
 
 .edu-section-container {
