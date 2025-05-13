@@ -14,8 +14,8 @@ function App() {
   const [educationData, setEducationData] = useState(initialEducationData);
   const [selectedIds, setSelectedIds] = useState({
     personal: personalData[0].id,
-    experience: experienceData[0].id,
-    education: educationData[0].id,
+    experience: null,
+    education: null,
   });
 
   const dataMap = {
