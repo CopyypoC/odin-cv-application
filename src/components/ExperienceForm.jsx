@@ -49,37 +49,42 @@ export function ExperienceForm({
           value={experienceItem ? experienceItem.position : ""}
         />
 
-        <label htmlFor="exp-start-date">Start Date</label>
-        <input
-          type="text"
-          id="exp-start-date"
-          name="startDate"
-          onChange={(e) =>
-            onChange(
-              experienceData,
-              e,
-              setExperienceData,
-              experienceItem.section
-            )
-          }
-          value={experienceItem ? experienceItem.startDate : ""}
-        />
-
-        <label htmlFor="exp-end-date">End Date</label>
-        <input
-          type="text"
-          id="exp-end-date"
-          name="endDate"
-          onChange={(e) =>
-            onChange(
-              experienceData,
-              e,
-              setExperienceData,
-              experienceItem.section
-            )
-          }
-          value={experienceItem ? experienceItem.endDate : ""}
-        />
+        <div className="date-container">
+          <div className="date-left">
+            <label htmlFor="exp-start-date">Start Date</label>
+            <input
+              type="text"
+              id="exp-start-date"
+              name="startDate"
+              onChange={(e) =>
+                onChange(
+                  experienceData,
+                  e,
+                  setExperienceData,
+                  experienceItem.section
+                )
+              }
+              value={experienceItem ? experienceItem.startDate : ""}
+            />
+          </div>
+          <div className="date-right">
+            <label htmlFor="exp-end-date">End Date</label>
+            <input
+              type="text"
+              id="exp-end-date"
+              name="endDate"
+              onChange={(e) =>
+                onChange(
+                  experienceData,
+                  e,
+                  setExperienceData,
+                  experienceItem.section
+                )
+              }
+              value={experienceItem ? experienceItem.endDate : ""}
+            />
+          </div>
+        </div>
 
         <label htmlFor="exp-location">Location</label>
         <input

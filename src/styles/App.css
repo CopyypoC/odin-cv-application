@@ -1,14 +1,22 @@
 /* Custom Vars */
 #root {
+  /* Main */
   --main-bg-clr: #222831;
   --main-accent-clr: #393e46;
   --font-clr-light: #ffffff;
   --font-clr-dark: #000000;
+
+  /* CV */
   --cv-bg-clr: #f2f0ef;
-  --cv-header--clr: #dfd0b8;
+  --cv-header-clr: #dfd0b8;
   --cv-accent-clr: #ece3d5;
+
+  /* Form */
+  --form-border-clr: 1px solid #555555;
   --form-section-gap: 4rem;
   --section-width: 85%;
+  --input-outline: 3px solid #1e8e94;
+  --save-bg-clr: #0097fa;
 }
 
 /* General */
@@ -34,14 +42,25 @@ form {
   color: var(--font-clr-light);
 }
 
-input {
+input,
+textarea {
   background-color: var(--cv-bg-clr);
-  border: 1px solid gray;
+  border: 0;
   padding: 3px;
+  margin-bottom: 12px;
+  border-radius: 12px;
+  padding: 8px;
+}
+
+input:focus-visible,
+textarea:focus-visible {
+  outline: var(--input-outline);
 }
 
 #description {
+  border-radius: 4px;
   resize: vertical;
+  overflow: hidden;
 }
 
 .cv-form-container {
@@ -50,12 +69,56 @@ input {
 }
 
 .cv-form {
-  border: 1px solid black;
-  padding: 10px;
+  border: var(--form-border-clr);
+  border-radius: 12px;
+  padding: 32px;
+}
+
+legend {
+  padding: 0;
+  font-weight: 600;
+  font-size: 1.5rem;
+  margin-bottom: 12px;
+}
+
+.date-container {
+  display: flex;
+  gap: 16px;
+}
+
+.date-left,
+.date-right {
+  width: 100%;
+}
+
+.date-left input,
+.date-right input {
+  width: 100%;
+}
+
+.date-container label {
+  display: block;
+  margin-bottom: 8px;
 }
 
 .personal-form {
   margin-bottom: var(--form-section-gap);
+}
+
+.save-btn {
+  margin-top: 2rem;
+  padding: 8px 40px;
+  border-radius: 12px;
+  border: 0;
+  background-color: var(--save-bg-clr);
+  color: var(--font-clr-light);
+  font-weight: 500;
+  font-size: 1.2rem;
+}
+
+.save-btn:hover {
+  cursor: pointer;
+  filter: brightness(1.05);
 }
 
 .exp-form,
@@ -76,7 +139,7 @@ legend {
 .edu-form-data {
   display: flex;
   flex-direction: column;
-  gap: 5px;
+  gap: 8px;
 }
 
 .edu-list,
@@ -100,7 +163,6 @@ legend {
   min-height: 70vh;
   width: 50vw;
   margin: 2rem 8rem 2rem 6rem;
-  border: 2px solid rgb(178, 179, 181);
   background-color: var(--cv-bg-clr);
 }
 
@@ -112,7 +174,7 @@ legend {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: var(--cv-header--clr);
+  background-color: var(--cv-header-clr);
 }
 
 .cv header h2 {

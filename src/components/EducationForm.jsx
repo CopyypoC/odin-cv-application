@@ -39,27 +39,42 @@ export function EducationForm({
           value={educationItem ? educationItem.degree : ""}
         />
 
-        <label htmlFor="edu-start-date">Start Date</label>
-        <input
-          type="text"
-          id="edu-start-date"
-          name="startDate"
-          onChange={(e) => {
-            onChange(educationData, e, setEducationData, educationItem.section);
-          }}
-          value={educationItem ? educationItem.startDate : ""}
-        />
-
-        <label htmlFor="edu-end-date">End Date</label>
-        <input
-          type="text"
-          id="edu-end-date"
-          name="endDate"
-          onChange={(e) => {
-            onChange(educationData, e, setEducationData, educationItem.section);
-          }}
-          value={educationItem ? educationItem.endDate : ""}
-        />
+        <div className="date-container">
+          <div className="date-left">
+            <label htmlFor="edu-start-date">Start Date</label>
+            <input
+              type="text"
+              id="edu-start-date"
+              name="startDate"
+              onChange={(e) => {
+                onChange(
+                  educationData,
+                  e,
+                  setEducationData,
+                  educationItem.section
+                );
+              }}
+              value={educationItem ? educationItem.startDate : ""}
+            />
+          </div>
+          <div className="date-right">
+            <label htmlFor="edu-end-date">End Date</label>
+            <input
+              type="text"
+              id="edu-end-date"
+              name="endDate"
+              onChange={(e) => {
+                onChange(
+                  educationData,
+                  e,
+                  setEducationData,
+                  educationItem.section
+                );
+              }}
+              value={educationItem ? educationItem.endDate : ""}
+            />
+          </div>
+        </div>
 
         <label htmlFor="edu-location">Location</label>
         <input
