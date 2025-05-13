@@ -23,8 +23,8 @@
 #root {
   display: grid;
   grid-template:
-    "title cv" min-content
-    "form cv" 1fr
+    "title cv" auto
+    "form cv" auto
     / 1fr 2fr;
   background-color: var(--main-bg-clr);
 }
@@ -157,10 +157,11 @@ legend {
 
 /* CV Template */
 .cv {
+  align-self: start;
+  min-height: 150vh;
   grid-area: cv;
   display: flex;
   flex-direction: column;
-  min-height: 70vh;
   width: 50vw;
   margin: 2rem 8rem 2rem 6rem;
   background-color: var(--cv-bg-clr);
@@ -242,4 +243,5 @@ legend {
 .edu-section-container {
   width: var(--section-width);
   place-self: center;
+  margin-bottom: 40px;
 }
