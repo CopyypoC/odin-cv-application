@@ -1,4 +1,5 @@
 import { FaArrowDown, FaBriefcase } from "react-icons/fa";
+import { useState } from "react";
 
 export function ExperienceList({
   experienceData,
@@ -7,6 +8,12 @@ export function ExperienceList({
   onDeleteItem,
   onSelectId,
 }) {
+  const [isDropDown, setDropDown] = useState(true);
+
+  const toggleDropDown = () => {
+    setDropDown(!isDropDown);
+  };
+
   const experienceItems = experienceData.map((item) => {
     return (
       <li key={item.id} data-uuid={item.id} className="list-item">
@@ -37,22 +44,29 @@ export function ExperienceList({
 
   return (
     <ul className="exp-list section-list">
-      <button type="button" className="list-title">
+      <button type="button" className="list-title" onClick={toggleDropDown}>
         <FaBriefcase className="list-icon" size={24} />
         <h3>Experience List</h3>
-        <FaArrowDown className="list-icon" size={24} />
+        <FaArrowDown
+          className={"list-icon " + (isDropDown ? "point-up" : "")}
+          size={24}
+        />
       </button>
-      {experienceItems}
-      <button
-        type="button"
-        className="list-add"
-        data-toggle-true
-        onClick={(e) =>
-          onAddItem(experienceData, e, toggleActive, "experience")
-        }
-      >
-        Add
-      </button>
+      <div className={"dropdown-grid " + (isDropDown ? "dropdown " : "")}>
+        <div className="list-items-container">
+          {experienceItems}
+          <button
+            type="button"
+            className="list-add"
+            data-toggle-true
+            onClick={(e) =>
+              onAddItem(experienceData, e, toggleActive, "experience")
+            }
+          >
+            Add
+          </button>
+        </div>
+      </div>
     </ul>
   );
 }

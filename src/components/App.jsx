@@ -5,6 +5,8 @@ import {
   initialEducationData,
 } from "./initial-form.js";
 import "../styles/App.css";
+import "../styles/CVForm.css";
+import "../styles/GeneratedCV.css";
 import { CVForm } from "./CVForm.jsx";
 import { GeneratedCV } from "./GeneratedCV.jsx";
 import { PiReadCvLogoBold } from "react-icons/pi";
