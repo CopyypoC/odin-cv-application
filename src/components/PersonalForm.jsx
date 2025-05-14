@@ -1,3 +1,5 @@
+import { FaUserEdit } from "react-icons/fa";
+
 export function PersonalForm({ dataMap, onChange }) {
   const personalData = dataMap.personal.personalData;
   const personalItem = dataMap.personal.personalData[0];
@@ -5,7 +7,10 @@ export function PersonalForm({ dataMap, onChange }) {
 
   return (
     <form className="cv-form personal-form">
-      <legend>Personal Details</legend>
+      <legend>
+        <FaUserEdit className="form-icon" size={32} />
+        <h2>Personal Details</h2>
+      </legend>
 
       <div
         className="personal-form-data"

@@ -1,4 +1,4 @@
-import { FaArrowDown } from "react-icons/fa";
+import { FaArrowDown, FaSchool } from "react-icons/fa";
 
 export function EducationList({
   educationData,
@@ -38,6 +38,7 @@ export function EducationList({
   return (
     <ul className="edu-list section-list">
       <button type="button" className="list-title">
+        <FaSchool className="list-icon" size={24} />
         <h3>Education List</h3>
         <FaArrowDown className="list-icon" size={24} />
       </button>

@@ -7,6 +7,7 @@ import {
 import "../styles/App.css";
 import { CVForm } from "./CVForm.jsx";
 import { GeneratedCV } from "./GeneratedCV.jsx";
+import { PiReadCvLogoBold } from "react-icons/pi";
 
 function App() {
   const [personalData, setPersonalData] = useState(initialPersonalForm);
@@ -57,7 +58,10 @@ function App() {
 
   return (
     <>
-      <h1>CV Generator</h1>
+      <header className="page-title-container">
+        <PiReadCvLogoBold className="page-title-icon" size={40} />
+        <h1>CV Generator</h1>
+      </header>
       <div className="cv-form-container">
         <CVForm
           experienceData={experienceData}

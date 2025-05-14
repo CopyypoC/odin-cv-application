@@ -31,11 +31,18 @@
   background-color: var(--main-bg-clr);
 }
 
-h1 {
+/* Page Title */
+.page-title-container {
+  display: flex;
   color: var(--font-clr-light);
   grid-area: title;
   place-self: center;
   margin-top: 1rem;
+}
+
+.page-title-icon {
+  margin-right: 1rem;
+  place-self: center;
 }
 
 /* CV Form */
@@ -77,10 +84,19 @@ textarea:focus-visible {
 }
 
 legend {
+  display: flex;
   padding: 0;
   font-weight: 600;
-  font-size: 1.5rem;
   margin-bottom: 12px;
+}
+
+legend h2 {
+  font-size: 1.5rem;
+}
+
+.form-icon {
+  place-self: center;
+  margin-right: 1rem;
 }
 
 .date-container {
@@ -197,6 +213,8 @@ legend {
 }
 
 .item-name {
+  text-align: left;
+  padding-left: 1rem;
   width: 100%;
 }
 
@@ -243,6 +261,15 @@ legend {
   font-weight: 400;
   gap: 2rem;
   margin: 0 1rem 1rem;
+}
+
+.personal-bottom-group {
+  display: flex;
+}
+
+.personal-bottom-icon {
+  place-self: center;
+  margin-right: 4px;
 }
 
 /* CV Sections */

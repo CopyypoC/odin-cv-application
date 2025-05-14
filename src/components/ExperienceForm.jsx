@@ -1,3 +1,5 @@
+import { FaBriefcase } from "react-icons/fa";
+
 export function ExperienceForm({
   experienceItem,
   onChange,
@@ -14,7 +16,10 @@ export function ExperienceForm({
       className={"cv-form exp-form " + (isActive ? "active " : "inactive")}
       inert={isActive ? undefined : true}
     >
-      <legend>Experience</legend>
+      <legend>
+        <FaBriefcase className="form-icon" size={32} />
+        <h2>Experience</h2>
+      </legend>
 
       <div className="exp-form-data">
         <label htmlFor="company">Company</label>

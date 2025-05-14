@@ -1,3 +1,5 @@
+import { FaSchool } from "react-icons/fa";
+
 export function EducationForm({
   educationItem,
   onChange,
@@ -14,7 +16,11 @@ export function EducationForm({
       className={"cv-form edu-form " + (isActive ? "active " : "inactive")}
       inert={isActive ? undefined : true}
     >
-      <legend>Education</legend>
+      <legend>
+        {" "}
+        <FaSchool className="form-icon" size={32} />
+        <h2>Education</h2>
+      </legend>
 
       <div className="edu-form-data">
         <label htmlFor="school">School</label>

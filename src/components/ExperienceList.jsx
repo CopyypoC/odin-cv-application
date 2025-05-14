@@ -1,4 +1,4 @@
-import { FaArrowDown } from "react-icons/fa";
+import { FaArrowDown, FaBriefcase } from "react-icons/fa";
 
 export function ExperienceList({
   experienceData,
@@ -38,6 +38,7 @@ export function ExperienceList({
   return (
     <ul className="exp-list section-list">
       <button type="button" className="list-title">
+        <FaBriefcase className="list-icon" size={24} />
         <h3>Experience List</h3>
         <FaArrowDown className="list-icon" size={24} />
       </button>
