@@ -1,3 +1,5 @@
+import { FaArrowDown } from "react-icons/fa";
+
 export function ExperienceList({
   experienceData,
   toggleActive,
@@ -34,9 +36,10 @@ export function ExperienceList({
   });
 
   return (
-    <ul className="exp-list">
+    <ul className="exp-list section-list">
       <button type="button" className="list-title">
-        Experience List
+        <h3>Experience List</h3>
+        <FaArrowDown className="list-icon" size={24} />
       </button>
       {experienceItems}
       <button

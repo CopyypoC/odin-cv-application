@@ -1,3 +1,5 @@
+import { FaArrowDown } from "react-icons/fa";
+
 export function EducationList({
   educationData,
   toggleActive,
@@ -34,9 +36,10 @@ export function EducationList({
   });
 
   return (
-    <ul className="edu-list">
+    <ul className="edu-list section-list">
       <button type="button" className="list-title">
-        Education List
+        <h3>Education List</h3>
+        <FaArrowDown className="list-icon" size={24} />
       </button>
       {educationItems}
       <button

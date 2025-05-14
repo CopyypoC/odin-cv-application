@@ -12,11 +12,13 @@
   --cv-accent-clr: #ece3d5;
 
   /* Form */
-  --form-border-clr: 1px solid #555555;
+  --form-border-clr: 0;
   --form-section-gap: 4rem;
   --section-width: 85%;
   --input-outline: 3px solid #1e8e94;
   --save-bg-clr: #0097fa;
+  --delete-bg-clr: #c70000;
+  --hover-brighten: brightness(1.05) saturate(1.05);
 }
 
 /* General */
@@ -118,7 +120,7 @@ legend {
 
 .save-btn:hover {
   cursor: pointer;
-  filter: brightness(1.05);
+  filter: var(--hover-brighten);
 }
 
 .exp-form,
@@ -142,17 +144,68 @@ legend {
   gap: 8px;
 }
 
-.edu-list,
-.exp-list {
-  border: 1px solid black;
+/* Item Lists */
+.section-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  border: var(--form-border-clr);
+  border-radius: 12px;
   margin-bottom: var(--form-section-gap);
+  background-color: var(--main-bg-clr);
+}
+
+.section-list button:hover {
+  cursor: pointer;
+  filter: var(--hover-brighten);
+}
+
+.list-title {
+  display: flex;
+  justify-content: space-between;
+  text-align: left;
+  font-size: 1.3rem;
+  font-weight: 500;
+  width: 100%;
+  height: 100%;
+  padding: 16px;
+  border: 0;
+  border-radius: 12px 12px 0 0;
+  background-color: var(--main-accent-clr);
+  color: var(--font-clr-light);
+}
+
+.list-icon {
+  place-self: center;
 }
 
 .list-item {
   display: flex;
   justify-content: space-between;
-  border-bottom: 1px solid black;
-  padding: 5px;
+}
+
+.item-name,
+.list-add {
+  background-color: var(--main-accent-clr);
+  color: var(--font-clr-light);
+  border: 0;
+  padding: 8px;
+}
+
+.list-add {
+  border-radius: 0 0 12px 12px;
+}
+
+.item-name {
+  width: 100%;
+}
+
+.item-delete {
+  background-color: var(--delete-bg-clr);
+  border: 0;
+  padding: 8px;
+  color: var(--font-clr-light);
+  margin-left: 2px;
 }
 
 /* CV Template */
