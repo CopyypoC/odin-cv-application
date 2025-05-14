@@ -5,7 +5,7 @@ export const initialPersonalForm = [
     name: "Ashley Williams",
     email: "ashley.williams@internet.com",
     phone: "(123) 123-1234",
-    location: "London, UK",
+    location: "Ogbomosho, NG",
   },
 ];
 
